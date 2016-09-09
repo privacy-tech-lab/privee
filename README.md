@@ -6,6 +6,8 @@ Privee (v1.2)
 
 Privee aims to make Web privacy policies easier and faster to understand. To that end, this Privee browser extension applies two different analysis methods: (1) It retrieves privacy policy analysis results from the crowdsourcing repository ToS;DR or, (2) if no such results are available, performs an automatic analysis based on rule and machine learning classification techniques.
 
+Privee is a research project, and you can find our paper here: http://sebastianzimmeck.de/zimmeckAndBellovin2014Privee.pdf
+
 2. Source Files
 ---------------
 

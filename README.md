@@ -8,6 +8,8 @@ Privee aims to make Web privacy policies easier and faster to understand. To tha
 
 Privee is a research project, and you can find our paper here: http://sebastianzimmeck.de/zimmeckAndBellovin2014Privee.pdf
 
+The Privee Chrome browser extension can be installed from the chrome web store: https://chrome.google.com/webstore/detail/privee/lmhnkfilbojonenmnagllnoiganihmnl?hl=en
+
 2. Source Files
 ---------------
 

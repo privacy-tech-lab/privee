@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<title>Learn More about Privee</title>
+<html style=''>
+	
+<head>
+<style type="text/css">
+  body {
+   margin: 30px;
+   text-align: justify;
+  }
+  .indent1 {
+   margin-left: 20px;
+  }
+  .indent2 {
+   margin-left: 40px;
+  }
+</style>
+</head>
+
+<body>
+	<font size="3">
+	<div id="wrapper" style="width:100%; text-align:center"> <img src="icon128.png"/></div>
+	
+	<p>
+		<a href="#1.">1. Classifications</a><br>
+		<a href="#1.1." class="indent1">1.1. General Remarks</a><br>
+		<a href="#1.2." class="indent1">1.2. Classification Categories</a><br>
+		<a href="#1.2.1." class="indent2">1.2.1. Collection</a><br>
+		<a href="#1.2.2." class="indent2">1.2.2. Profiling</a><br>
+		<a href="#1.2.3." class="indent2">1.2.3. Ad Tracking</a><br>
+		<a href="#1.2.4." class="indent2">1.2.4. Ad Disclosure</a><br>
+		<a href="#1.2.5." class="indent2">1.2.5. Limited Retention</a><br>
+		<a href="#1.2.6." class="indent2">1.2.6. Encryption</a><br>
+		<a href="#2.">2. Grading</a>
+	</p>
+	
+	<p>Privee aims to make Web privacy policies easier and faster to understand. To that end, this Privee browser extension applies two different analysis methods: (1) It retrieves privacy policy analysis results from the crowdsourcing repository ToS;DR or, (2) if no such results are available, performs an automatic analysis based on rule and machine learning classification techniques.</p>
+	
+	<p>It is important to note that Privee is an academic project. The analysis results are not endorsed by the Web services whose policies are analyzed. The results also do not cover every policy aspect and can be incorrect at times (we measured an overall accuracy across all classifications of 84%). Thus, if you want to be sure about the contents of a policy, you should refer to the policy itself.</p>
+		
+	<p>The following will discuss details of the automatic classification categories and the grading of the policies. For research results, please see: <i>Sebastian Zimmeck and Steven M. Bellovin, Privee: An Architecture for Automatically Analyzing Web Privacy Policies, 23rd USENIX Security Symposium, San Diego, CA, USA, August 2014</i>. To learn more about the crowdsourcing analysis please visit <a href="http://tosdr.org/" target="_blank">ToS;DR</a>.</p>
+	
+	<h1><a id="1.">1. Classifications</a></h1>
+	
+	<p>The Privee extension makes six binary classifications. For example, it decides whether or not a policy allows ad tracking or whether or not a policy has a retention limit. However, some general remarks apply to all classification categories.</p>
+	
+	<h2><a id="1.1.">1.1. General Remarks</a></h2> 
+	
+	<p>A policy is analyzed solely based on its content and not on any external information. Thus, for example, if the URL of a website starts with "https" indicating that information is securely encrypted, but the privacy policy does not say that encryption is used, the policy is classified as not providing for encryption. Thus, in some cases there might be a difference between the privacy practices stated in a privacy policy and the privacy practices as they are actually applied.</p>
+	
+	<p>If certain privacy practices under a policy are contingent upon user registration or participation, the policy is analyzed from the perspective of a registered or participating user. Thus, for example, if personal information is only collected from registered users and not from unregistered users, the policy is classified as allowing collection. Similarly, if certain practices are dependent on a user's consent, opt-in, or opt-out, it is assumed that the user consented, opted in, or did not opt out, respectively.</p> 
+	
+	<p>If a policy does not state whether or not it allows a certain privacy practice that is analyzed by our Privee extension, the policy is classified as not providing for that practice. The same is true for cases in which a policy does not discuss a certain analysis topic at all. Thus, for example, if a policy does not mention a limited retention period or does not talk about retention of information at all, the policy is classified as not providing for a retention limit.</p>
+
+	<h2><a id="1.2.">1.2. Classification Categories</a></h2> 
+	
+	<p>A policy of a Web service is analyzed for six different binary classifications:</p>
+	
+	<a href="#1.2.1." class="indent2">1.2.1. Collection</a><br>
+	<a href="#1.2.2." class="indent2">1.2.2. Profiling</a><br>
+	<a href="#1.2.3." class="indent2">1.2.3. Ad Tracking</a><br>
+	<a href="#1.2.4." class="indent2">1.2.4. Ad Disclosure</a><br>
+	<a href="#1.2.5." class="indent2">1.2.5. Limited Retention</a><br>
+	<a href="#1.2.6." class="indent2">1.2.6. Encryption</a><br>
+
+	<h3><a id="1.2.1.">1.2.1. Collection: "Collection of Personal Info (such as e-mail address)" vs. "No Collection of Personal Info (such as e-mail address)"</a></h3>
+
+	<p>Collection means the gathering of personal information (also known as Personally Identifiable Information (PII)), such as name, e-mail address, postal address, photos, videos, blog posts, from the user of the service. The collection category covers essentially all information that can identify the user.</p>
+	
+	<p>Collection means the transfer of information from a user to a Web service. Thus, third-party submissions of information to a Web service are generally not covered. For example, collection does not mean obtaining information about a user from a data broker.</p>
+
+	<p>It should be noted that the collection category does not cover information that is gathered as a matter of the user's computer communicating with a Web server, such as IP addresses or other automatically transmitted communication information. More generally, collection only refers to types of information that can be clearly qualified as PII, not to categories for which it is not clear whether they are PII or not.</p>
+
+	<p>While some policies do not explicitly mention that personal information is collected, this practice can be often inferred from the context. For example, if a policy says "Our website collects information." and later explains "Information covers your name, e-mail, ... .", then the classifier should conclude that personal information is collected. Sometimes collection practices also follow from the way how information is gathered (e.g., "We store your pictures on servers in the United States.").</p>
+
+	<p>The collection category covers information collection in many different ways. For example, collection can happen by phone, e-mail, or postal mail. It does not necessarily need to be by submitting information online. The collection can also have many different purposes, such as applying for a job or obtaining an e-mail newsletter. Collection is also not limited to the submission while using a Web service. If the privacy policy covers gathering of information by these other means and for those other purposes, it can be a collection.</p>
+
+	<h4>Examples for Collection Classification</h4> 
+
+	<ul>
+	<p><li>"We will collect some of your personal information that you provide to us."</p></li>
+
+	<p><li>"We will not gather your personal information except when you submit data to us voluntarily."</p></li>
+
+	<p><li>"If you want to participate in a sweepstakes, you need to submit your name and postal address."</p></li>
+
+	<p><li>"User Information: When you register for our services, you can provide PII to us."</p></li>
+
+	<p><li>"We will keep your chat logs."</p></li>
+
+	<p><li>"Information collected: ... if you apply for a job with us; ..."</p></li>
+	</ul>
+
+	<h3><a id="1.2.2.">1.2.2. Profiling: "Combination with Info from outside Companies" vs. "No Combination with Info from outside Companies"</a></h3>
+
+	<p>Profiling means that the Web service obtains personal or non-personal information about a user from an outside company or from publicly available sources and combines it with existing information it collected from that user. So, if the service just combines all the information it collected itself from the user, such practice would not be sufficient for profiling.</p>
+
+	<p>An outside company must be an entity that is not affiliated with the Web service engaging in the profiling. For example, subsidiaries, affiliates, and other related companies are not outside companies. Therefore, if affiliated companies pool all their information about a specific user, such action is not considered profiling. Outside companies can be also non-profit companies, governmental agencies, or other third parties.</p>
+
+	<p>The combined information must not be solely obtained from the user's own actions. For example, there is no profiling if a user logs into a Web service through a social network giving the service access to his or her social network information. In such case any information aggregation is wholly and directly based on the user's own actions and not considered profiling.</p>
+
+	<p>It is insufficient for profiling if the service only aggregates information from outside companies without collecting any information itself. In this sense, there are two elements to profiling: (1) obtaining information from outside companies and (2) combining it with own collected information. Each element by itself is not sufficient and both elements must be stated in the privacy policy.</p>
+
+	<p>It also does not qualify as profiling if a Web service just obtains aggregate data that cannot be tied to an identifiable user. Thus, for example, Web analytics, such as overall number of users from a certain region that visit a service's website or information about when traffic reaches peak numbers, are not covered by the profiling category.</p>
+
+	<h4>Examples for Profiling Classification</h4>
+	
+	<ul>
+	<p><li>"We may supplement the information we have about you with information gathered from other companies."</p></li>
+
+	<p><li>"We will combine your information with information about you that is publicly available or that we obtain from other sources."</p></li>
+
+	<p><li>"We enhance collected information with third party information."</p></li>
+	</ul>
+	
+	<h4>Examples for No Profiling Classification</h4>
+
+	<ul>
+	<p><li>"We will share your information with our business partners. Sometimes they will also be able to directly collect information from you."</p></li>
+
+	<p><li>"We will obtain non-PII about you from advertisers and service providers that they have independently gathered or acquired."</p></li>
+
+	<p><li>"We will combine information that we collected from you with information collected from other users."</p></li>
+	</ul>
+ 
+	<h3><a id="1.2.3.">1.2.3. Ad Tracking: "Advertising Tracking (e.g., use of Ad Cookies)" vs. "No Advertising Tracking (e.g., no use of Ad Cookies)"</a></h3>
+
+	<p>Ad tracking means third party tracking for advertisement purposes, that is, third party ad networks or other third parties electronically tracking the visitor of a website or user of a service for advertising purposes. Such tracking can happen by means of third party tracking cookies, however, other technologies, such as browser fingerprinting, qualify as well.</p>
+
+	<p>Ad tracking can not only happen on websites, but on other services as well, for example, when using mobile apps that track user behavior. Ad tracking also does not need to be necessarily done by ad networks, but can also be done by other third parties that have advertising purpose, for example, by outside companies who are allowed to directly advertise on a service's website.</p>
+
+	<p>The ad tracking classification requires: (1) third party tracking and (2) advertisement purpose. If either element is missing, the practice is not ad tracking. For example, if a company uses cookies to advertise on its own website, it is not ad tracking. The same result holds for third party cookies placed by third party analytics companies (e.g., for measuring site traffic).</p>
+
+	<p>Further, ad tracking is not applicable if the analyzed privacy policy states that it uses ad networks for advertising on third party sites. This situation is the reverse from the classification, which is that third parties use tracking technology on the service's website. However, if the service both uses ad networks on other sites and allows third party tracking on its own site, this practice would be ad tracking because of the latter.</p>
+
+	<p>There are some practices similar to ad tracking, however, which usually do not qualify. For example, if third parties are allowed to have promotions or loyalty programs on a service's site, those will usually not qualify unless it is mentioned that the third party uses some tracking technology. Further, disclosing collected information to third parties for advertising purposes does not qualify because it does not involve any tracking. Also, social login mechanisms are not covered.</p>
+
+	<h4>Examples for Ad Tracking Classification</h4>
+
+	<ul>
+	<p><li>"Our third party ad networks allow us to serve you advertisement according to your interests."</p></li>
+
+	<p><li>"We use behavioral advertising companies on our website."</p></li>
+
+	<p><li>"When you use our service, trusted third parties, who are members of the Network Advertising Initiative, will place cookies on your computer."</p></li>
+
+	<p><li>"If you want to opt out from advertising, click http://www.adchoices.com."</p></li>
+
+	<p><li>"We store the following cookies on your machine: ..., [ad network cookie], ... ."</li>
+	</ul>
+
+	<h4>Examples for No Ad Tracking Classification</h4>
+
+	<ul>
+	<p><li>"We store cookies on your machine to keep track of what items are in your shopping cart. We also use analytics providers to analyze site traffic."</p></li>
+
+	<p><li>"We disclose some of your information to our service providers and advertisers."</p></li>
+	</ul>
+ 
+	<h3><a id="1.2.4.">1.2.4. Ad Disclosure: "Disclosure of Personal Info to Advertisers" vs. "No Disclosure of Personal Info to Advertisers"</a></h3>
+
+	<p>Similar to ad tracking ad disclosure also relates to advertisement. However, different from ad tracking ad disclosure covers the situation where a company has collected personal information and forwards that information to a third party for the third party's advertising purposes. Ad disclosure means the sharing of collected Information with third parties (subsidiaries, affiliates, and other related companies are not third parties) for their advertising purposes.</p>
+
+	<p>Ad disclosure excludes various other disclosures of personal information, among which are, disclosures to other users (for example, on dating websites), to service providers (for example, if an online retailer uses a third party shipping provider), to "business partners" (as far as there is no mentioning of advertising business partners), to a government entity for purposes of law enforcement, to litigants of a law suit, to enforce terms of use, or disclosures in the context of corporate reorganizations.</p>
+
+	<p>Also, even some cases of advertisement do not qualify for an ad disclosure, particularly, joint promotions, co-branding or loyalty programs, such as frequent flyer programs. The disclosure must be solely for the third party's advertising purposes and also not inherently permitted or specifically requested by the user.</p>
+
+	<p>Sometimes the ad disclosure classification depends on user consent or the user opting in or out. In those cases it is assumed that the user gave consent, has opted in that his or her information can be disclosed to third party advertisers, or did not opt out.</p>
+
+	<p>Ad disclosure does not occur if a Web service does not share the information with a third party, but rather acts on behalf of the third party. For example, if a third party company asks a Web service to forward the company's advertisement to all the users of the Web service, there is no ad disclosure.</p>
+
+	<p>Another point to account for is that the entity to which information is disclosed does not necessarily have to be a for-profit entity. Rather, it can be a professional organization or public interest organization.</p>
+
+	<p>General statements such as "We do not sell or rent your personal information" are often not conclusive for establishing that no ad disclosure occurs. The remainder of the privacy policy is often more nuanced and is taken into consideration for the classification decision.</p>
+
+	<h4>Examples for Ad Disclosure Classification</h4>
+
+	<ul>
+	<p><li>"Sometimes we share your telephone number with carefully selected third parties that we believe have interesting information for you."</p></li>
+
+	<p><li>"We provide your information to our business partners so that they can market to you."</p></li>
+	</ul>
+
+	<h4>Examples for No Ad Disclosure Classification</h4>
+
+	<ul>
+	<p><li>"We disclose to third party promotional companies information in the aggregate, which, however, does not allow individual identification of our customers."</p></li>
+
+	<p><li>"We will disclose your information in the course of our joint marketing campaigns with non-affiliates."</p></li>
+
+	<p><li>"Your information is disclosed to a third party advertiser who will send you our most recent offers on a quarterly basis."</p></li>
+
+	<p><li>"Upon your request, we will disclose your information to our partners so that they can send you the requested information."</p></li>
+		</ul>
+ 
+	<h3><a id="1.2.5.">1.2.5. Limited Retention: "Personal Info is only Archived for Limited Time" vs. "Personal Info is Archived for Unlimited Time"</a></h3>
+
+	<p>The limited retention classification requires that all personal information relating to a user is certainly deleted from the storage of the data holder within some time.</p>
+
+	<p>It should be noted that limited retention only refers to PII and not to non-PII. Non-PII can be retained for an unlimited time period. However, if a service holds both types of information and does not distinguish in the retention provision between PII and non-PII (for example, holding "information" for a limited time), this practice will be insufficient for a limited retention classification.</p>
+
+	<p>It is further insufficient if a privacy policy provides that information is deleted save the technological possibility to do so, if only commercially reasonable efforts are used, if residual information remains on the server for a potentially infinite time, or that best efforts of deletion are made. In these cases the policy should be not qualified as providing limited retention.</p>
+
+	<p>The retention limit can either refer to a specific time period, to the time when the information is no longer needed for purposes for which it was collected, or to the deletion after a reasonable time period. In all these cases, even if the time is very long or not yet determined, it is still a limited retention. However, there must be at least some phrase stating that information is at some point deleted.</p>
+
+	<p>If the privacy policy does not discuss the topic of information retention at all, the policy is classified as providing for unlimited retention because there is no generally applicable retention period in statutory law or regulations in the United States.</p>
+
+	<p>The reason why information is retained is not considered for the classification decision. The retention can be for business purposes, law enforcement purposes, technical difficulties in deleting, or any other purpose.</p>
+
+	<p>There are some practices that should be distinguished from the retention classification. Particularly, it is not enough for a limited retention classification that a user can close an account so that it is no longer accessible or that the data is "deleted from the website." Rather, the question is whether there is deletion of the information from the servers. Also, expiration of a cookie is not enough, rather deletion of the server logs would be necessary.</p>
+
+	<h4>Examples for Limited Retention Classification</h4>
+
+	<ul>
+	<p><li>"We retain your information for as long as necessary to fulfill the purposes for which it was collected and/or as long as necessary to meet any legal requirements."</p></li>
+
+	<p><li>"We will retain your information for a reasonable time period." (A potentially long period, but still a limited retention.)</p></li>
+
+	<p><li>"We retain information as long as it is necessary and relevant for our operations." (A potentially long period, but still a limited retention.)</p></li>
+
+	<p><li>"Upon your request we will delete your information from our servers."</p></li>
+
+	<p><li>"We will keep your information until you close your account."</p></li>
+
+	<p><li>"We retain your information as necessary to provide you with the services that you requested."</p></li>
+	</ul>
+
+	<h4>Examples for No Limited Retention Classification</h4>
+
+	<ul>
+	<p><li>"You can close your account any time. If you desire, you can also access, correct, or update your account information."</p></li>
+
+	<p><li>"Upon your request, we will delete all your information from our servers. We will also use reasonable efforts to delete your information from our backup servers."</p></li>
+
+	<p><li>"If you want us to delete your information, we will generally do so."</p></li>
+
+	<p><li>"After three months of inactivity in your account, we will delete your information from our server and backup systems. However, we may retain your contact information for record keeping purposes."</p></li>
+	</ul>
+ 
+	<h3><a id="1.2.6.">1.2.6. Encryption: "Stored and/or Transmitted Info is Encrypted" vs. "Stored and Transmitted Info is not Encrypted"</a></h3>
+
+	<p>Encryption means that user information or parts thereof are transmitted or stored in an encrypted format. The type of encryption is not taken into account for the classification decision.</p>
+
+	<p>The policy has to explicitly mention "encryption" or a specific type of encryption technique. General statements about the use of "secure industry standards" are not sufficient.</p>
+
+	<h4>Examples for Encryption Classification</h4>
+
+	<ul>
+	<p><li>"We protect the transmission of your credit card information by using SSL."</p></li>
+
+	<p><li>"Your information is safe with us because we use various encryption techniques to store your information."</p></li>
+	</ul>
+	
+	<h1><a id="2.">2. Grading</a></h1>
+
+	<p>In addition to the descriptions for the classifications, the Privee extension also labels each policy with an overall letter grade, which depends on the classifications. More specifically, the grade is determined by the number of points a policy is assigned. For collection, profiling, ad tracking, and ad disclosure a policy receives one minus point, respectively. However, for not allowing one of these practices a policy receives one plus point. A policy also receives a plus point for featuring limited retention or encryption, respectively. If a policy has in total more than one point it receives grade A (above average overall privacy), between one minus point and one plus point a B (average overall privacy); and less than one minus point a C (below average overall privacy).</p>
+
+	<p>Privee (v1.1) 08/06/2014</p>
+	</font>
+</body>
+</html>

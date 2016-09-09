@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<title>Privee Analysis Results</title>
+<html style=''>
+
+<head>
+<script src='popup.js'></script>
+<script src='labeler.js'></script>
+<script src='classifier.js'></script>
+<script src='preprocessor.js'></script>
+<script src='trainingData.js'></script>
+<script src='trainer.js'></script>
+<script src='scraper.js'></script>
+<script src="jQuery.js"></script>
+</head>
+
+<body style="width:400px; height:50px; font-family: Calibri; font-weight: bold">
+	
+	<div id="crowdAnalysis"> </div>
+	
+	<div id="labelGrade" align="center" style="font-weight: bold; text-shadow: 1px 0; font-size: 16px" title="Overall Letter Grade of the Policy based on all Individual Privacy Practices"> </div>
+	<div id="label0" title="Does the policy allow collection of personal information from users?" align="left" style="margin-top: 30px"> </div>
+	<div id="label1" title="Does the policy allow the aggregation of information collected from users with information from outside companies or other third parties?" align="left" style="margin-top: 10px"> </div>
+	<div id="label2" title="Does the policy allow ad tracking by means of ad cookies or other trackers?" align="left" style="margin-top: 10px"> </div>
+	<div id="label3" title="Does the policy allow disclosure of personal information to advertisers?" align="left" style="margin-top: 10px"> </div>
+	<div id="label4" title="Does the policy restrict archiving of personal information to a limited time period?" align="left" style="margin-top: 10px"> </div>
+	<div id="label5" title="Does the policy provide encryption for information storage or transmission?" align="left" style="margin-top: 10px; padding-bottom: 40px"> </div>
+	
+	<table align="center"; style="width:380px; font-family: Calibri; font-weight: normal; font-size: small; column-width: 190px">
+	<tr>
+		 <td><div id="headline" align="left" style="font-weight: bold"> </div></td>
+	</tr>
+	<tr>
+	  <td><div id="explanation1" title="If a policy has more than one plus point, it is assigned above average overall privacy." align="left" style="margin-top: 1px"> </div></td>
+	  <td><div id="explanation4" title="For each good privacy practice the policy gets one plus point." align="left" style="margin-top: 1px"> </div></td>
+	</tr>
+	<tr>
+	  <td><div id="explanation2" title="If a policy has between one plus point and one minus point, it is assigned average overall privacy." align="left"> </div></td>
+	  <td><div id="explanation5" title="Neutral privacy practices do not cause point increase or decrease." align="left"> </div></td>
+	</tr>
+	<tr>
+	  <td><div id="explanation3" title="If a policy has less than one minus point, it is assigned below average overall privacy." align="left"> </div></td>
+	  <td><div id="explanation6" title="For each bad privacy practice the policy gets one minus point." align="left"> </div></td>
+	</tr>
+	</table>
+	
+	<div style="margin-top: 20px"><a href="about.html" target="_blank">Learn More</a></div>
+
+</body>
+</html>

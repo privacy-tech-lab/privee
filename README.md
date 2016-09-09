@@ -30,7 +30,7 @@ Windows or OSX with Google Chrome (tested for Version 38.0.2125.122 m)
 4. Installing and Running Privee
 --------------------------------
 
-If you obtained a packed extension at the chrome web store, follow their installation instructions. If you obtained an unpacked extension, unzip the Privee zip folder, save it at a convenient location, and load the folder as an unpacked extension within Google Chrome (Settings -> Extensions -> Load unpacked extension...). To run Privee go to the website with the privacy policy that you want to analyze and push the P button in the upper right hand corner of Google Chrome. The first ML classifier run takes one minute to analyze training data.
+If you obtained a packed extension at the chrome web store, follow their installation instructions. If you obtained source files, save those at a convenient location, and load the folder as an unpacked extension within Google Chrome (Settings -> Extensions -> Load unpacked extension...). To run Privee go to the website with the privacy policy that you want to analyze and push the P button in the upper right hand corner of Google Chrome. The first ML classifier run takes one minute to analyze training data.
 
 5. Version History
 ------------------

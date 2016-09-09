@@ -43,8 +43,8 @@ If you obtained a packed extension at the chrome web store, follow their install
 - v1.1 added functionality to retrieve ToS;DR symbols/points for individual classifications (08/06/2014)
 - v1.0 initial limited release (06/27/2014)
 
-6. Copyright
-------------
+6. License
+----------
 
 Privee is released under the BSD 3-Clause License.
 Copyright (c) 2014, Sebastian Zimmeck and Steven M. Bellovin

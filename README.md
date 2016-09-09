@@ -1,5 +1,5 @@
-Privee (v1.2) 11/13/2014
-------------------------
+Privee (v1.2)
+-------------
 
 1. What is Privee?
 ------------------
@@ -35,7 +35,7 @@ If you obtained a packed extension at the chrome web store, follow their install
 5. Version History
 ------------------
 
-- v1.2 changed font sizes for better display
+- v1.2 changed font sizes for better display (11/13/2014)
 - v1.1 added functionality to retrieve ToS;DR symbols/points for individual classifications (08/06/2014)
 - v1.0 initial limited release (06/27/2014)
 

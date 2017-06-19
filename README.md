@@ -1,9 +1,7 @@
 # Privee (v1.2)
 
-Privee: An Architecture for Automatically Analyzing Web Privacy Policies
-
-Sebastian Zimmeck and Steven M. Bellovin
-
+Privee: An Architecture for Automatically Analyzing Web Privacy Policies  
+Sebastian Zimmeck and Steven M. Bellovin  
 23rd USENIX Security Symposium (USENIX), San Diego, CA, USA, August 2014 (also presented at PLSC 2014 and FoPNaC 2014)
 
 ## 1. What is Privee?

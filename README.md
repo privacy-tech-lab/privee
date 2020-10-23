@@ -48,4 +48,4 @@ Privee is released under the BSD 3-Clause License, 2014, Sebastian Zimmeck and S
 
 ## 7. Contact Info
 
-For feedback and questions please contact Sebastian Zimmeck at sebastian@sebastianzimmeck.de
+For feedback and questions please contact Sebastian Zimmeck at sebastian@privacytechlab.org

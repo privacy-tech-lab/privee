@@ -1,5 +1,7 @@
 # Privee (v1.2)
 
+**Note: As of February 2021 Privee is no longer functional due to various browser API changes.**
+
 Privee: An Architecture for Automatically Analyzing Web Privacy Policies  
 Sebastian Zimmeck and Steven M. Bellovin  
 23rd USENIX Security Symposium (USENIX), San Diego, CA, USA, August 2014  
@@ -10,8 +12,6 @@ Sebastian Zimmeck and Steven M. Bellovin
 Privee aims to make Web privacy policies easier and faster to understand. To that end, this Privee browser extension applies two different analysis methods: (1) It retrieves privacy policy analysis results from the crowdsourcing repository ToS;DR or, (2) if no such results are available, performs an automatic analysis based on rule and machine learning classification techniques.
 
 Privee is a research project, and you can find our paper here: http://sebastianzimmeck.de/zimmeckAndBellovin2014Privee.pdf
-
-The software here can be also installed from the chrome web store: https://chrome.google.com/webstore/detail/privee/lmhnkfilbojonenmnagllnoiganihmnl?hl=en
 
 ## 2. Source Files
 

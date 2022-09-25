@@ -51,5 +51,5 @@ Privee is released under the BSD 3-Clause License, 2014, Sebastian Zimmeck and S
 For feedback and questions please contact Sebastian Zimmeck at sebastian@privacytechlab.org
 
 <p align="center">
-  <a href="https://www.privacytechlab.org/"><img src="./plt_logo.png" width="200px" height="200px" alt="privacy-tech-lab logo"></a>
+  <a href="https://privacytechlab.org/"><img src="./plt_logo.png" width="200px" height="200px" alt="privacy-tech-lab logo"></a>
 <p>

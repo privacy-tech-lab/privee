@@ -1,6 +1,6 @@
 # Privee (v1.2)
 
-**Note: As of February 2021 Privee is no longer functional due to various browser API changes.**
+**Note: As of February 2021 Privee is no longer functional due to various browser API changes. However, take a look at [Privacy Analyzer](https://github.com/banksAcc/privacy_analyzer)!**
 
 Privee: An Architecture for Automatically Analyzing Web Privacy Policies  
 Sebastian Zimmeck and Steven M. Bellovin  
